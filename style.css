@@ -1,0 +1,1104 @@
+:root, [data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+} */
+
+/* .main {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px
+        rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+} */
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width:100%;
+    padding: 5px;
+    color:blue;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    
+}
+/* 
+button[type="submit"] {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+} */
+
+.dropdown .dropdown-menu{
+    line-height:17px;
+}
+.identify{
+    width:100%;
+    font-weight:400;
+    display:block;
+    color:#575454;
+}
+
+.professional-add-button{
+    border:none;
+    background-color:#ddd;
+}
+.acadmic-add-button{
+    border:none;
+    background-color:#ddd;
+}
+.extra-add-button{
+    border:none;
+    background-color:#ddd;
+}
+.work-add-button{
+    border:none;
+    background-color:#ddd;
+}
+.format-template h2{
+    background-color:rgb(43, 219, 160);
+    color:white;
+    font-weight:700;
+
+}
+
+.template-button{
+    border:none;
+    background-color:rgb(17, 218, 151);
+    padding:8px 22px;
+    border-radius:10px;
+    color:white;
+    margin:5px 0px;
+    font-weight: 500;
+    width:100%;
+}
+.template-button a{
+    text-decoration: none;
+    color:white;
+}
+
+.template-button:hover{
+    background-color:rgb(33, 162, 119);
+}
+
+.resume-formate{
+    background-color:#ddd;
+    padding:10px;
+}
+.fill-form{
+    margin:5px 0px;
+    font-size:25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.identify span{
+    color:red;
+}
+
+.paragraph-content{
+    display:inline;
+
+}
+
+
+/* .acadmic input,button{
+    float:initial;
+    width:20%;
+    display:inline;
+} */
+
+.referes-captcha:hover{
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.captcha-text{
+    text-align: center;
+    word-spacing: 1em;
+
+}
+
+@media (min-width:609px) and (max-width:992px){
+
+        .identify{
+            /* color:red; */
+            font-size:12px;
+            display:block;
+        }      
+        .top-heading-content{
+            font-size:25px;
+        } 
+        .paragraph-content{
+            font-size:12px;
+        }
+
+        .fill-form strong{
+            font-size:20px;
+        }
+
+        .input-data-work{
+            /* display:block; */
+            width:100%;
+        }
+}
+
+@media (min-width:462px) and (max-width:609px){
+
+        .identify{
+            color:rgb(49, 8, 229);
+            font-size:12px;
+            display:block;
+            float:inline-end;
+            width:100%;
+        }        
+
+        .top-heading-content{
+            font-size:20px;
+        } 
+
+        .input-data-work{
+            display:block;
+            width:100%;
+        }
+
+        .paragraph-content{
+            font-size:12px;
+        }
+
+        .fill-form strong{
+            font-size:16px;
+        }
+}
+
+@media (min-width:300px) and (max-width:462px){
+
+        .identify{
+            color:green;
+            font-size:10px;
+            display:block;
+            float:inline-end;
+            width:100%;
+        }         
+
+        .input-data-work{
+            display:block;
+            width:100%;
+        }
+
+        .paragraph-content{
+            font-size:10px;
+        }
+
+        
+        .fill-form strong{
+            font-size:14px;
+        }
+
+        .top-heading-content{
+            font-size:14px;
+        } 
+}
+
+/* index */
+.navbar-img-photo{
+    width:200p;
+    height:60px;
+    
+}
+
+.navbar-heading-text{
+    margin-left: 10px;
+    font-weight:500;
+    font-size:30px;
+   
+}
+
+@media (min-width:300px) and (max-width:449px){
+    .navbar-heading-text{
+        font-size:15px!important;
+        margin:none;
+    }
+}
+@media (min-width:250px) and (max-width:300px){
+    .navbar-heading-text{
+        font-size:12px!important;
+        margin:none;
+    }
+}
+.navbar-expand-lg{
+    background-color:black;
+}
+.navbar-collapse .navbar-nav .nav-item .nav-link{
+    color:white;
+}
+
+.navbar-toggler-icon{
+    background-color:rgb(23, 210, 61);
+    border-radius:10px;
+    color:white;
+    width:40px;
+}
+
+
+
+.tools-bar-menu{
+    margin-top:60px;
+}
+.tools-bar-menu .container-fluid{
+     background-color:#cdc8c8;
+     padding:10px;
+     
+}
+
+.tools-type{
+    background-color:#999999;
+    text-align: center;
+    padding:20px;
+}
+
+.button-type{
+    margin-top:15px;
+}
+.click-button-type{
+    border:none;
+    width:100%;
+    color:rgb(248, 243, 243);
+    /* font-weight:600; */
+    padding:5px;
+    font-family:math;
+    margin-bottom:20px;
+    background-color: #FF5733;
+}
+.click-button-type a:hover{
+    color:#30f93a;
+}
+.click-button-type a{
+    text-decoration: none;
+    color: white;
+}
+
+/* template-4*/
+.curriculum-vitae{
+    font-weight:700;
+    font-family:math;
+}
+.basic-information ul li{
+    list-style-type: none;
+    font-family:math;
+    line-height: 20px;
+}
+
+.career-objective-heading{
+    font-weight:700;
+    background-color:tomato;
+    color:white;
+    font-family:math;
+}
+
+.career-objective-content{
+    text-align: left;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: math;
+    
+}
+.qualification h5{
+    text-align: center;
+    background-color:tomato;
+    font-weight: 900;
+    font-family:math;
+    color:white;
+}
+.table-mangement{
+    width:100%;
+    text-align: center;
+    margin:10px 0px;
+    
+}
+.table-mangement tr td{
+      font-family:math;
+      border:2px solid red;
+}
+.table-mangement .table-heading{
+    font-family:math;
+    border:2px solid red;
+}
+.extra-qualification ul li strong{
+     font-family:math;
+     font-weight:600;
+}
+.table-mangement-personal{
+    width:70%;
+    /* text-align: start; */
+    margin:10px 0px;
+    text-align: justify;
+    margin-left: 100px;
+    font-family:math;
+       
+}
+
+.declaration{
+    margin-left: 100px;
+}
+.declaration h5{
+    font-family:math;
+    font-weight:500;
+    display:inline;
+    
+}
+.declaration-context{
+    font-family:math;
+    display:inline;
+    /* font-weight:500; */
+    font-size:18px;
+    /* font-style:italic; */
+    line-height:18px;
+}
+.basic-information li u{
+    color:blue;
+}
+.condidate-image img{
+    border:1px solid black;
+    padding:10px;
+    width:200px;
+    height:200px;
+}
+
+/* Age-Calculator html css*/
+
+.age-calculation{
+    margin-top:100px;
+}
+.heading-text{
+     text-align: center;
+     font-family:math;
+     font-weight:900;
+}
+.age-identify span{
+    color:red;
+}
+.age-table{
+    width:100%;
+}
+.age-col{
+    /* padding:20px; */
+    background-color:#ddd;
+    font-family: math;
+     padding:5px 20px 40px 20px;
+     border:1px solid black;
+}
+.age-submit-button, .age-reset-button{
+    border:none;
+    padding:5px 20px;
+    margin-top:10px;
+}
+.age-submit-button{
+    background-color: deeppink;
+    color:white;
+}
+.age-reset-button{
+    background-color: darkorange;
+    color:white;
+}
+.age-submit-button:active{
+    background-color:rgb(0, 0, 0);
+    color:white;
+}
+.age-reset-button:active{
+    background-color: red;
+    color:black;
+}
+.age-calculation-div{
+    padding: 5px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+.age-calculatin-heading{
+    font-family:math;
+    margin-top:-7px;
+    text-align:center;
+}
+.age-calculation-ul li{
+    list-style: none;
+    font-family:math;
+    background-color: gray;
+    padding: 0px 20px;
+    margin: 2px;
+    color: white;
+
+}
+/* typing lession html page*/
+.typing-lession{
+     margin-top:70px;
+     /* font-family: math; */
+}
+
+.typing-chapter ul li a{
+     text-decoration:none;
+     color:rgb(101, 93, 93);
+}
+
+.typing-chapter ul li a:hover{
+    color:rgb(233, 149, 23);
+}
+/* #old-date-submit-button{
+    width:100%;
+    padding: 5px;
+    color:blue;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+} */
+/* Marriage Bio Details html page css here below write start*/
+
+.marriage-bio-data{
+     margin-top:150px;
+     margin-bottom:100px;
+}
+#heading-one button{
+    background-color: green;
+    color: white;
+    font-size: 22px;
+    font-family: math;
+    font-weight: 900;
+    height:30px;
+    
+}
+#heading-one button span{
+    color:#eede30;
+}
+#heading-two button{
+    background-color: #4d2b76;
+    color: white;
+    font-size: 22px;
+    font-family: math;
+    font-weight: 900;
+    height:30px;
+}
+#heading-two button span{
+    color:#eede30;
+}
+#heading-three button{
+    background-color: #ff7043;
+    color: white;
+    font-size: 22px;
+    font-family: math;
+    font-weight: 900;
+    height:30px;
+}
+#heading-three button span{
+    color:#eede30;
+}
+
+#heading-four button{
+    background-color:#F6084C ;
+    color: white;
+    font-size: 22px;
+    font-family: math;
+    font-weight: 900;
+    height:30px;
+}
+#heading-four button span{
+    color:#eede30;
+}
+
+.table-personal-details{
+    width:100%;
+}
+.table-personal-details input,textarea{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.table-personal-details tr td label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.person-label-manage{
+    color:#d4cfcf;
+}
+.add-more-personal-details-button{
+    border:none;
+    padding:10px 15px;
+    background-color:rgb(21, 172, 16);
+    color:white;
+    font-weight:500;
+    border-radius: 10px;
+
+}
+#bio-img-change{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.person-input-checkbox{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #59a059 !important;
+}
+.bio-all-images img{
+    width:50px;
+    height:50px;
+}  
+
+.modal-body .bio-all-images img:hover{
+    border:1px solid black;
+    background-color:#999999;
+    width:60px;
+    height:60px;
+    opacity: 0.5;
+    transform: rotate(-2.0turn);
+    transition-duration: 1s;
+}
+.modal-body .bio-all-images img:active{
+
+    background-color:green;
+}
+/* Family details here */
+.table-family-details{
+    width:100%;
+}
+.table-family-details input,textarea{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.table-family-details tr td label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.add-more-family-details-button{
+    border:none;
+    padding:10px 15px;
+    background-color:#4d2b76;
+    color:white;
+    font-weight:500;
+    border-radius: 10px;   
+}
+.family-checkbox-manage{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #59a059 !important; 
+}
+.family-label-manage{
+    color:#d4cfcf;
+}
+
+/* Contact Details start here.........*/
+.table-contact-details{
+    width:100%;
+}
+.contact-checkbox{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #59a059 !important; 
+}
+.table-contact-details input,textarea{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.table-contact-details tr td label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact-label-manage{
+    color:#d4cfcf;
+}
+.add-more-contact-details-button{
+    border:none;
+    padding:10px 15px;
+    background-color:#ff7043;
+    color:white;
+    font-weight:500;
+    border-radius: 10px;    
+}
+
+/** Photo name joiner html page start here ...**/
+.photo-name-joiner{
+    margin-top:100px;
+    
+}
+.name-photo-joiner{
+    border:2px solid black;
+    padding:5px 20px 40px 20px;
+    font-family:math;
+    font-weight:550;
+    font-style: normal;
+}
+
+.photo-name-table{
+    width:100%;
+}
+.file-type{
+    width:100%;
+    padding: 5px;
+    color:blue;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.photo-name-table tr td span{
+    color:red;
+}
+.photo-submit-button{
+    border:none;
+    background-color:#59a059;
+    padding:5px 10px;
+    color:white;
+    border-radius:10px;
+}
+
+.photo-reset-button{
+    border:none;
+    background-color:#eede30;
+    padding:5px 15px;
+    color:red;
+    border-radius:10px;
+    margin-top:10px;
+    
+}
+/*Template for one styling */
+.template-one{
+    background-color:rgb(107, 233, 107);
+    font-family:auto;
+    font-style:italic;
+    font-weight:800;
+    /* border-bottom:2px solid black; */
+}
+.table-mangement-template-one{
+    width:100%;
+    text-align: center;
+    margin:10px 0px;
+}
+.table-mangement-template-one tr td{
+    font-family:math;
+    border:2px solid green;
+}
+.table-mangement-template-one .table-heading{
+  font-family:math;
+  border:2px solid green;
+}
+.condidate-image-template-one img{
+    width:200px;
+    height:200px;
+    border:1px solid green;
+    padding:10px;
+}
+/* Template-3  */
+.address-template-three{
+    text-transform: capitalize;
+    font-family:math;
+    line-height:16px;
+}
+ .basic-information-template-three ul{
+    
+    list-style-type: none; 
+    font-family:math;
+    line-height: 20px;
+ }
+
+ .objective-content-template-three{
+    font-family:math;
+ }
+ .template-three{
+    background-color:blue;
+    color:white;
+    font-family:math;
+    font-weight:800;
+ }
+ .table-mangement-template-three{
+    width:100%;
+    text-align: center;
+    margin:10px 0px;
+ }
+ .table-mangement-template-three tr td{
+     border:2px solid blue;
+     font-family:math;
+ }
+ .table-mangement-template-three .table-heading{
+    border:2px solid blue;
+    font-family:math;
+ }
+.qualification-template-three{
+    text-align: center;
+}
+
+/* Template Two */
+.resume-head{
+    background-color:rgba(183, 188, 185, 0.951);
+    text-align: center;
+    border-bottom:2px solid black;
+}
+.basic-info{
+    text-align: center;
+    margin-top:100px;
+    margin:0px 15px;
+}
+
+.basic-info img{
+    width:200px;
+    height:200px;
+    margin-top:100px;
+    
+}
+.basic-info-head{
+    background-color:rgba(183, 188, 185, 0.951);
+    margin-top:1px!important;
+    
+}
+.career-objective-temp-two{
+    font-weight:650;
+    font-family:math;
+
+}
+.temp-two-name{
+    font-weight:700;
+}
+.objective-temp-two{
+    text-align: justify;
+}
+.contact-temp-two{
+    font-family:math;
+    font-weight:650;
+    text-align: center;
+}
+.objective-temp-two{
+    font-family:'Times New Roman', Times, serif;
+}
+.mobile-temp-two{
+    font-family:math;
+}
+.phone-number{
+    line-height: 8px;
+    font-family:math;
+}
+.email-temp-two{
+    font-family:math;
+   
+}
+.email-id-temp-one{
+    font-family:math;
+    line-height:0px;
+}
+.address-temp-two{
+    text-align:center;
+    font-family:math;
+    font-weight:650;
+}
+.address-details{
+    font-family:math;
+}
+.acadmic-head-temp-two{
+    font-family:math;
+}
+.acadmic-head-temp-two h5{
+    font-weight:800;
+
+}
+.table-mangement-temp-two{
+    width:100%;
+    text-align: center;
+    margin:10px 0px;
+    
+}
+.table-mangement-temp-two tr td{
+      font-family:math;
+      border:2px solid black;
+}
+.table-mangement-temp-two .table-heading{
+    
+    border:2px solid black;
+}
+.extra-qualification-temp-two ul li{
+    text-transform:capitalize;
+}
+
+/* Image Resizer page..... */
+.resizer-header{
+    margin-top:100px;
+    margin-bottom:20px;
+}
+.form-control-resize{
+    border:2px solid black;
+    margin-top:30px;
+    font-family:math;
+    padding:10px 30px;
+}
+.resize-reset-button{
+    border:none;
+    border-radius:10px;
+    background-color:rgb(222, 8, 8);
+    color:white;
+    padding:7px 15px;
+
+}
+.resize-submit-button{
+    border:none;
+    border-radius:10px;
+    background-color:var(--bs-success);
+    color:white;
+    padding:7px 15px;
+}
+.upload-photo-file{
+    width:100px;
+    height:100px;
+} 
+.upload-photo-file:hover{
+    border:1px solid rgb(140, 21, 21);
+    border-radius:100%;
+    padding:5px;
+    cursor:pointer;   
+    /* background-color:green; */
+}
+.input-file{
+    display:none;
+}
+#selected-img{
+    width:200px;
+    height:150px;
+    border:2px solid black;
+    padding:5px;
+    border-radius:10px;
+}
+#dataUrl{
+    display:none;
+}
+
+@media (max-width:400px){
+    #selected-img{
+        width:100px;
+        height:100px;
+    }
+    .resize-reset-button{
+       font-size: 12px;
+       margin-top:10px;
+    }
+    .resize-submit-button{
+        font-size:12px;
+    }
+}
+@media (max-width:522px){
+    .resize-reset-button{
+        /* font-size: 12px; */
+        margin-top:10px;
+        padding:3px 5px;
+        
+     }
+     .resize-submit-button{
+        /* font-size:12px; */
+        padding:3px 5px;
+    }
+}
+
+/* typing page  started below here*/
+
+.typing-header{
+     margin-top:30px;
+}
+.typing-col{
+    border:1px solid black;
+    padding:10px 10px;
+}
+.typing-data .col-3 div{
+     padding:0;
+     background-color: black;
+     color: navajowhite;
+     font-family:math;
+     /* font-size:20px; */
+}
+.typing-data .col-3 div strong,h6{
+    font-size:30px;
+}
+.typing-text{
+    margin-top:15px;
+    height:200px;
+    /* overflow-wrap: break-word; */
+    /* overflow: overlay; */
+    overflow-y: clip;
+}
+.typing-text p{
+    font-size:22px;
+}
+.type-content input{
+    text-align: center;
+    height:50px;
+    border:2px solid black;
+    font-size:30px;
+    background-color: rgb(170, 164, 164);
+    padding:30px 0px;
+    border-radius: 0 0;
+}
+.restart-button-typing{
+    float:right;
+    padding:6px 20px;
+    background-color: red;
+    color:white;
+    font-family:math;
+    /* border-radius:10px; */
+    margin-top:10px;
+    border:none;
+    font-weight:700;
+}
+.stop-button-typing{
+    float:right;
+    padding:6px 20px;
+    background-color: red;
+    color:white;
+    font-family:math;
+    /* border-radius:10px; */
+    margin-top:10px;
+    border:none;
+    font-weight:700;
+    margin-left:5px;
+}
+/* time set of typing */
+.time-header{
+    margin-top:30px;
+}
+.time-col{
+    border:1px solid black;
+    
+}
+.time-col .set-time{
+    margin-top:200px;
+    margin-bottom:200px;
+}
+.start-test{
+    float:right;
+    padding:8px 20px;
+    background-color: red;
+    color:white;
+    font-family:math;
+    border-radius:10px;
+    margin-top:10px;
+    border:none;
+    font-weight:700;
+}
+/* marriage bio photo upload details start here */
+.photo-bio-details{
+    width:100%;
+    font-family:math;
+    /* text-align: center; */
+    display:none;
+}
+.bio-option-user{
+    font-family:math;
+}
+.bio-option-user .bio-button{
+    margin-top:10px;
+    padding:20px;
+    border:none;
+    background-color:green;
+    padding: 5px 16px;
+    border-radius: 10px;
+    color: white;
+}
+.birthday-div{
+    margin-top:-7px;
+    background-color:white;
+    text-align: center;
+    padding:8px;
+}
+.birthday-button{
+    border:none;
+    padding:5px 15px;
+    font-family:math;
+    background-color: fuchsia;
+    color: white;
+    cursor: pointer;
+    margin-bottom:3px;
+}
+.birthday-ul{
+    list-style: none;
+}
+.birthday-ul li{
+    background-color: cadetblue;
+    color: white;
+    text-align: start;
+    margin: 0px 0px 2px 0px;
+    padding: 0px 20px;
+}
+.typing-header{
+    margin-top:1px;
+}
+.alphabet-img{
+    border-radius: 7px;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+.type-here input{
+    height: 100px;
+    font-size: 102px;
+    text-align: center;
+    border: 5px solid green;
+    border-radius: 0px;
+}
+.alpha-data h1{
+    margin-top: 10px;
+    font-size: 70px;
+    color: red;
+}
+.alpha-data{
+    margin-top:35px!important;
+}
+@media (min-width:400px) and (max-width:550px){
+      .show-data{
+        font-size:30px!important;
+      }
+}
+@media (min-width:300px) and (max-width:400px){
+    .show-data{
+      font-size:20px!important;
+    }
+}
+@media (min-width:250px) and (max-width:300px){
+    .show-data{
+      font-size:15px!important;
+    }
+}
