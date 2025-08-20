@@ -562,6 +562,42 @@ button[type="submit"] {
 .table-personal-details tr td label{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+@media (min-width:250px) and (max-width:650px){
+    .accordion-body .table-personal-details tr td{
+        width:10px!important;
+    }
+    .table-personal-details tr td label{
+        font-size: 12px;
+        color: #198754!important;
+    }
+    .table-personal-details tr td .person-input-checkbox{
+        font-size: 11px!important;
+    }
+    .table-personal-details tr td{
+        padding:5px 0px;
+    }
+    .table-personal-details{
+        font-size: 11px!important;
+    }
+    .table-family-details{
+        font-size:12px;
+    }
+    .family-label-manage{
+        font-size: 10px;
+        color: #4d2b76!important;
+    }
+    .table-contact-details{
+        font-size: 12px;
+    }
+    .contact-label-manage{
+        color: tomato !important;;
+    }
+}
+@media (min-width:250px) and (max-width:400px){
+    .accordion-button{
+        font-size:15px!important;
+    }
+}
 .person-label-manage{
     color:#d4cfcf;
 }
@@ -1101,4 +1137,13 @@ button[type="submit"] {
     .show-data{
       font-size:15px!important;
     }
+}
+
+.married-bio-heading{
+    font-size: 21px;
+    background-color: teal;
+    color: white;
+    padding: 2px;
+    border-radius: 55px;
+    font-family: auto;
 }
