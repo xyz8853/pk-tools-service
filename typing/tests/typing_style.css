@@ -292,7 +292,7 @@ button[type="submit"] {
 
 
 .tools-bar-menu{
-    margin-top:60px;
+    /* margin-top:60px; */
 }
 .tools-bar-menu .container-fluid{
      background-color:#cdc8c8;
@@ -317,10 +317,15 @@ button[type="submit"] {
     padding:5px;
     font-family:math;
     margin-bottom:20px;
-    background-color: #FF5733;
+    /* background-color: #FF5733; */
+    background-color: #999999;
+}
+.click-button-type:hover{
+    background-color:#7166AD;
 }
 .click-button-type a:hover{
-    color:#30f93a;
+    color:white;
+    font-weight: 600;
 }
 .click-button-type a{
     text-decoration: none;
@@ -697,7 +702,7 @@ button[type="submit"] {
 
 /** Photo name joiner html page start here ...**/
 .photo-name-joiner{
-    margin-top:100px;
+    margin-top:40px;
     
 }
 .name-photo-joiner{
@@ -1146,4 +1151,10 @@ button[type="submit"] {
     padding: 2px;
     border-radius: 55px;
     font-family: auto;
+}
+
+@media (max-width:517px){
+    .resume-heading h1{
+        font-size: 12px;
+    }
 }
