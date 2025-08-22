@@ -289,14 +289,9 @@ button[type="submit"] {
     width:40px;
 }
 
-
-
-.tools-bar-menu{
-    /* margin-top:60px; */
-}
 .tools-bar-menu .container-fluid{
      background-color:#cdc8c8;
-     padding:10px;
+     /* padding:10px; */
      
 }
 
@@ -483,11 +478,6 @@ button[type="submit"] {
 
 }
 /* typing lession html page*/
-.typing-lession{
-     margin-top:70px;
-     /* font-family: math; */
-}
-
 .typing-chapter ul li a{
      text-decoration:none;
      color:rgb(101, 93, 93);
@@ -1157,4 +1147,12 @@ button[type="submit"] {
     .resume-heading h1{
         font-size: 12px;
     }
+}
+.typing-top-head{
+    font-size: 21px;
+    background-color: teal;
+    color: white;
+    padding: 2px;
+    border-radius: 55px;
+    font-family: auto;
 }
