@@ -137,17 +137,22 @@ button[type="submit"] {
     padding:10px;
 }
 .fill-form{
-    margin:5px 0px;
+    margin:0px 0px;
     font-size:25px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:italic;
+    font-family:auto;
 }
 .identify span{
     color:red;
 }
 
 .paragraph-content{
-    display:inline;
-
+    /* display:inline; */
+    margin-left: 0px;
+    line-height: 13px;
+    font-style: italic;
+    font-weight:100;
+    font-family:auto;
 }
 
 
@@ -291,7 +296,7 @@ button[type="submit"] {
 
 .tools-bar-menu .container-fluid{
      background-color:#cdc8c8;
-     /* padding:10px; */
+     padding: 15px 0px;
      
 }
 
@@ -417,7 +422,8 @@ button[type="submit"] {
 /* Age-Calculator html css*/
 
 .age-calculation{
-    margin-top:100px;
+    background-color:darkslategray;
+    padding-bottom:160px
 }
 .heading-text{
      text-align: center;
@@ -497,8 +503,7 @@ button[type="submit"] {
 /* Marriage Bio Details html page css here below write start*/
 
 .marriage-bio-data{
-     margin-top:150px;
-     margin-bottom:100px;
+     margin:15px 0px;
 }
 #heading-one button{
     background-color: green;
@@ -692,11 +697,12 @@ button[type="submit"] {
 
 /** Photo name joiner html page start here ...**/
 .photo-name-joiner{
-    margin-top:40px;
+    margin:15px 0px;
     
 }
 .name-photo-joiner{
-    border:2px solid black;
+    margin-top:10px;
+    border:1px solid black;
     padding:5px 20px 40px 20px;
     font-family:math;
     font-weight:550;
@@ -802,9 +808,12 @@ button[type="submit"] {
 
 /* Template Two */
 .resume-head{
+    padding:20px 0px;
     background-color:rgba(183, 188, 185, 0.951);
-    text-align: center;
     border-bottom:2px solid black;
+}
+.resume-head .resume-section div .row div{
+    margin:15px 0px;
 }
 .basic-info{
     text-align: center;
@@ -892,12 +901,11 @@ button[type="submit"] {
 
 /* Image Resizer page..... */
 .resizer-header{
-    margin-top:100px;
-    margin-bottom:20px;
+    margin:15px 0px;
 }
 .form-control-resize{
-    border:2px solid black;
-    margin-top:30px;
+    border:1px solid black;
+    margin-top:10px;
     font-family:math;
     padding:10px 30px;
 }
@@ -1155,4 +1163,7 @@ button[type="submit"] {
     padding: 2px;
     border-radius: 55px;
     font-family: auto;
+}
+.resizer-row div{
+    padding:0px 5px;
 }
