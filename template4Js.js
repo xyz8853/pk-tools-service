@@ -164,7 +164,6 @@ window.onload = function() {
             //footer client style name
         let footerClientName = document.querySelector('#userFooterSignature');
             footerClientName.textContent = nameToOb[0];
-        let clientSetPhoto = document.querySelector('#userResumePhoto');
 
           //photo get from the session
         // Get the image data URL from sessionStorage
@@ -183,3 +182,70 @@ window.onload = function() {
         }
 }
 
+const cssColors = [
+  "AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure",
+  "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue",
+  "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse",
+  "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson",
+  "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray",
+  "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen",
+  "DarkOrange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen",
+  "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet",
+  "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue",
+  "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro",
+  "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey",
+  "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed",
+  "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush",
+  "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan",
+  "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink",
+  "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey",
+  "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen",
+  "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid",
+  "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise",
+  "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin",
+  "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab",
+  "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen",
+  "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru",
+  "Pink", "Plum", "PowderBlue", "Purple", "RebeccaPurple",
+  "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon",
+  "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver",
+  "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow",
+  "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle",
+  "Tomato", "Turquoise", "Violet", "Wheat", "White",
+  "WhiteSmoke", "Yellow", "YellowGreen"
+];
+
+
+  let clientSetPhoto = document.querySelector('#userResumePhoto');
+  let resumeTitle = document.querySelector('#curriculumVitaeTitle');
+  //to change work below selected id or class
+//   let careerHeading = document.querySelector('.template-three');
+//   let acadmicQualHeading = document.querySelector('#acadmicQualHeading');
+  let h5 = document.querySelectorAll('h5');
+  let indexColor = 0;
+    let changeThemeColor = document.querySelector('#changeColorTheme');
+      changeThemeColor.addEventListener('click', (event)=>{
+        resumeTitle.style.backgroundColor = cssColors[indexColor];
+        clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
+            h5.forEach((val)=>{
+                val.style.backgroundColor = cssColors[indexColor];
+            })
+          indexColor++;
+      })
+  let textColorIndex=cssColors.length-1;
+  let changeTextColor = document.querySelector('#changeTextColor')
+  changeTextColor.addEventListener('click',e=>{
+      resumeTitle.style.color=cssColors[textColorIndex];
+      
+      h5.forEach((val)=>{
+          val.style.color = cssColors[textColorIndex];
+       })
+      textColorIndex--;
+  })
+
+  let manageTwoBtn = document.querySelector('#manageBtn');
+    manageTwoBtn.addEventListener('click', e=>{
+            changeThemeColor.style.display='none';
+        changeTextColor.style.display='none';
+        manageTwoBtn.style.display='none';
+    })
