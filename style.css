@@ -62,12 +62,15 @@ textarea,
 select {
     width:100%;
     padding: 5px;
-    color:blue;
+    color:rgb(225, 143, 36);
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 10px;
     
 }
+/* html{
+        width: fit-content!important;
+} */
 /* 
 button[type="submit"] {
     padding: 15px;
@@ -94,6 +97,27 @@ button[type="submit"] {
     border:none;
     background-color:#ddd;
 }
+.acadmic-add-button, .professional-add-button,
+.extra-add-button, .work-add-button{
+    border-radius: 10px;
+    display: inline-block;
+    width: auto;
+    padding: 0px 3px;
+    font-family: fantasy;
+    background-color: darkslategrey!important;
+    color: white;
+}
+.acadmic,.acadmic1,.acadmic2,.acadmic3{
+    display:inline-flex;
+    margin-bottom:4px;
+}
+.professional,.professional-div1,.professional-div2,.professional-div3{
+    display:inline-flex;
+    margin-bottom:4px;
+}
+/* .acadmic1{
+    display: inline-flex;
+} */
 .acadmic-add-button{
     border:none;
     background-color:#ddd;
@@ -133,7 +157,7 @@ button[type="submit"] {
 }
 
 .resume-formate{
-    background-color:#ddd;
+    background-color: #fbe7e7;
     padding:10px;
 }
 .fill-form{
@@ -156,11 +180,12 @@ button[type="submit"] {
 }
 
 
-/* .acadmic input,button{
-    float:initial;
-    width:20%;
-    display:inline;
-} */
+.acadmic input{
+    margin:5px 0px;
+}
+.professional input{
+    margin:5px 0px;
+}
 
 .referes-captcha:hover{
     cursor: pointer;
@@ -170,9 +195,17 @@ button[type="submit"] {
 .captcha-text{
     text-align: center;
     word-spacing: 1em;
+    letter-spacing: 12px;
+    color: #ffffff;
+    background-color: aquamarine;
 
 }
-
+@media (min-width:992px) and (max-width:1400px){
+    .input-data-work{
+            display:block;
+            width:100%;
+    }
+}
 @media (min-width:609px) and (max-width:992px){
 
         .identify{
@@ -193,6 +226,10 @@ button[type="submit"] {
 
         .input-data-work{
             /* display:block; */
+            width:100%;
+        }
+        .input-data-work{
+            display:block;
             width:100%;
         }
 }
@@ -225,8 +262,10 @@ button[type="submit"] {
         }
 }
 
-@media (min-width:300px) and (max-width:462px){
-
+@media (min-width:200px) and (max-width:462px){
+        /* input,select,textarea{
+            width:auto!important;
+        } */
         .identify{
             color:green;
             font-size:10px;
@@ -239,7 +278,20 @@ button[type="submit"] {
             display:block;
             width:100%;
         }
-
+        /* .input-data-work .acadmic input{
+            width:100%;
+            width: auto;
+        } */
+        .input-data-work .acadmic button{
+            width:100%;
+            width: auto;
+        }
+        .acadmic,.acadmic1,.acadmic2,.acadmic3{
+            display:block;
+        }
+        .professional,.professional-div1,.professional-div2,.professional-div3{
+            display:block;
+        }
         .paragraph-content{
             font-size:10px;
         }
@@ -252,6 +304,12 @@ button[type="submit"] {
         .top-heading-content{
             font-size:14px;
         } 
+}
+@media (min-width:200px) and (max-width:300px){
+    .input-data-work{
+        display:block;
+        width:100%;
+    }
 }
 
 /* index */
@@ -274,10 +332,15 @@ button[type="submit"] {
         margin:none;
     }
 }
-@media (min-width:250px) and (max-width:300px){
+@media (min-width:200px) and (max-width:300px){
     .navbar-heading-text{
-        font-size:12px!important;
+        font-size:14px!important;
         margin:none;
+    }
+    .navbar-img-photo{
+        width:200p;
+        height:33px;
+    
     }
 }
 .navbar-expand-lg{
@@ -335,6 +398,9 @@ button[type="submit"] {
 /* template-4*/
 .curriculum-vitae{
     font-weight:700;
+    font-family:math;
+}
+#extraQualUl, #workExperienceUl{
     font-family:math;
 }
 .basic-information ul li{
@@ -557,7 +623,7 @@ button[type="submit"] {
 }
 .table-personal-details input,textarea{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
+    /* font-style: italic; */
 }
 .table-personal-details tr td label{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -765,7 +831,9 @@ button[type="submit"] {
     width:200px;
     height:200px;
     border:1px solid green;
-    padding:10px;
+    /* padding:10px; */
+    border-radius:100%;
+    border:5px solid black;
 }
 /* Template-3  */
 .address-template-three{
@@ -809,7 +877,7 @@ button[type="submit"] {
 /* Template Two */
 .resume-head{
     padding:20px 0px;
-    background-color:rgba(183, 188, 185, 0.951);
+    /* background-color:rgba(183, 188, 185, 0.951); */
     border-bottom:2px solid black;
 }
 .resume-head .resume-section div .row div{
@@ -825,7 +893,14 @@ button[type="submit"] {
     width:200px;
     height:200px;
     margin-top:100px;
-    
+}
+@media (min-width:200px) and (max-width:556px){
+    .basic-info img{
+    width: 100px;
+    height: 127px;
+    margin-top: 100px;
+    border-radius: 47px;
+}   
 }
 .basic-info-head{
     background-color:rgba(183, 188, 185, 0.951);
@@ -1164,6 +1239,19 @@ button[type="submit"] {
     border-radius: 55px;
     font-family: auto;
 }
-.resizer-row div{
-    padding:0px 5px;
+
+#resumeTemplateFirst{
+    display:none;
+}
+
+#changeColorTheme, #changeTextColor, #manageBtn{
+    color: white;
+    background: black;
+    border: 1px solid double;
+    border: none;
+    border-radius: 3px;
+}
+#changeColorTheme:hover, #changeTextColor:hover, #manageBtn:hover{
+    background-color:goldenrod;
+    color:black;
 }
