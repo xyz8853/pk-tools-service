@@ -1255,3 +1255,6 @@ button[type="submit"] {
     background-color:goldenrod;
     color:black;
 }
+#userExtraQualification, #userWorkExperience{
+    font-family: math;
+}
