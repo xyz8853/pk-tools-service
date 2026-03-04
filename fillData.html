@@ -17,10 +17,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img class="navbar-img-photo" src="img/pklogo2.jpg" alt="" />
-      <a class="navbar-brand navbar-heading-text" style="font-size: 28px; color: white" href="#">PRASHANT KUMAR
-        TOOLS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand navbar-heading-text" style="font-size: 28px; color: white" href="#">PRASHANT KUMAR TOOLS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,7 +55,7 @@
       </div>
     </div>
   </nav>
-  <header class="body-header mt-5">
+  <header class="resume-head">
     <section>
       <div class="container-fluid">
         <div class="row justify-content-center">
@@ -69,69 +67,70 @@
               <div class="fill-form" style="text-align: center">
                 <strong>Fill the Form</strong>
               </div>
-              <form action="">
+              <form action="post" onsubmit="formHandlingData(event)">
                 <table class="table-management">
                   <tr>
                     <td class="identify">Name:<span>*</span></td>
                     <td class="input-data-work">
-                      <input type="text" name="name" />
+                      <input type="text" name="clientName" value=""/>
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Address:<span>*</span></td>
                     <td class="input-data-work">
-                      <textarea name="address" id="" cols="100" rows="2"></textarea>
+                      <textarea name="clientAddress" value="" id="" cols="100" rows="2"></textarea>
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Mobile No.:<span>*</span></td>
-                    <td class="input-data-work"><input type="number" /></td>
+                    <td class="input-data-work"><input type="number" name="clientMobileNumber" value=""/></td>
                   </tr>
                   <tr>
                     <td class="identify">Email Id: <span>*</span></td>
                     <td class="input-data-work">
-                      <input type="email" name="email" id="email" />
+                      <input class="" type="email" name="clientEmailId" value="" id="email" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Date of Birth: <span>*</span></td>
                     <td class="input-data-work">
-                      <input type="date" id="date" name="date" />
+                      <input type="date" id="date" name="clientDOB" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Father Name: <span>*</span></td>
                     <td class="input-data-work">
-                      <input type="text" id="fatherName" name="fatherName" />
+                      <input type="text" id="fatherName" name="ClientFatherName" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Mother Name: <span>*</span></td>
                     <td class="input-data-work">
-                      <input type="text" id="motherName" name="motherName" />
+                      <input type="text" id="motherName" name="clientMotherName" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Nationality: <span>*</span></td>
                     <td class="input-data-work">
-                      <input type="text" id="nationality" name="nationality" />
+                      <input type="text" id="nationality" name="clientNationality" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Gender: <span>*</span></td>
                     <td class="input-data-work">
-                      <select name="gender" id="gender">
-                        <option value="null">--Select--</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                      <select name="ClientGender" id="gender">
+                        <option value="none">--Select--</option>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
                       </select>
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Marital Status: <span>*</span></td>
                     <td class="input-data-work">
-                      <select name="marital" id="marital">
-                        <option value="null">--Select--</option>
+                      <select name="ClientMarital" id="marital">
+                        <option value="none">--Select--</option>
                         <option value="married">Married</option>
                         <option value="unmarried">Unmarried</option>
                       </select>
@@ -142,72 +141,19 @@
                       Language Knowledge: <span>*</span>
                     </td>
                     <td class="input-data-work">
-                      <input type="text" id="language" name="language" />
+                      <input type="text" id="language" name="clientSpeakLanguage" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Hobbies: <span>*</span></td>
                     <td class="input-data-work">
-                      <input type="text" id="hobbies" name="hobbies" />
+                      <input type="text" id="hobbies" name="ClientHobbies" />
                     </td>
                   </tr>
                   <tr>
                     <td class="identify">Career Objective: <span>*</span></td>
                     <td class="input-data-work">
-                      <div class="div-radio-button">
-                        <input class="radio-click-option" type="radio" name="career" />
-                        <p class="paragraph-content">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Id commodi aliquam sed numquam deleniti amet
-                          fugit quos maiores, ipsam at iure minus quasi
-                          accusamus quo vero officia consequuntur molestiae
-                          assumenda.
-                        </p>
-                      </div>
-                      <div>
-                        <input class="radio-click-option" type="radio" name="career" id="" />
-                        <p class="paragraph-content">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Possimus itaque placeat voluptatem quibusdam
-                          incidunt ut dicta. Obcaecati delectus repellendus
-                          laboriosam assumenda ipsa numquam, veritatis
-                          placeat?
-                        </p>
-                      </div>
-                      <div>
-                        <input class="radio-click-option" type="radio" name="career" id="" />
-                        <p class="paragraph-content">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Possimus itaque placeat voluptatem quibusdam
-                          incidunt ut dicta. Obcaecati delectus repellendus
-                          laboriosam assumenda ipsa numquam, veritatis
-                          placeat?
-                        </p>
-                      </div>
-                      <div>
-                        <input class="radio-click-option" type="radio" name="career" id="" />
-                        <p class="paragraph-content">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Possimus itaque placeat voluptatem quibusdam
-                          incidunt ut dicta. Obcaecati delectus repellendus
-                          laboriosam assumenda ipsa numquam, veritatis
-                          placeat?
-                        </p>
-                      </div>
-                      <div>
-                        <input class="radio-click-option" type="radio" name="career" id="" />
-                        <p class="paragraph-content">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Possimus itaque placeat voluptatem quibusdam
-                          incidunt ut dicta. Obcaecati delectus repellendus
-                          laboriosam assumenda ipsa numquam, veritatis
-                          placeat?
-                        </p>
-                      </div>
-                      <div>
-                        <strong>or Write here</strong>
-                        <textarea name="career" id=""></textarea>
-                      </div>
+                      <textarea rows="5" cols="200" name="clientObjectiveText" id=""></textarea>
                     </td>
                   </tr>
                   <tr>
@@ -216,11 +162,11 @@
                     </td>
                     <td class="input-data-work acadmic-all-input">
                       <div class="acadmic">
-                        <input type="text" name="aExam" placeholder="Exam" />
-                        <input type="text" name="aBoard" placeholder="Board/University" />
-                        <input type="text" name="aPassingYear" placeholder="Passing year" />
-                        <input type="text" name="aMark" placeholder="Mark %" />
-                        <input type="text" name="aDivision" placeholder="Division" />
+                        <input type="text" name="clientExam" placeholder="Exam" />
+                        <input type="text" name="clientBoardOrUniversity" placeholder="Board/University" />
+                        <input type="text" name="clientPassingYear" placeholder="Passing year" />
+                        <input type="text" name="clientMarkPercentage" placeholder="Mark %" />
+                        <input type="text" name="clientDivision" placeholder="Division" />
                         <button class="acadmic-add-button" id="acadmicNewAdd" value="add">
                           Add
                         </button>
@@ -231,11 +177,11 @@
                     <td class="identify">Professional Qualification:</td>
                     <td class="input-data-work professional-all-input">
                       <div class="professional">
-                        <input type="text" name="pExam" placeholder="Exam" />
-                        <input type="text" name="pBoard" placeholder="Board/University" />
-                        <input type="text" name="pPassingYear" placeholder="Passing year" />
-                        <input type="text" name="pMark" placeholder="Mark %" />
-                        <input type="text" name="pDivision" placeholder="Division" />
+                        <input type="text" name="clientProExam" placeholder="Exam" />
+                        <input type="text" name="clientProBoard" placeholder="Board/University" />
+                        <input type="text" name="clientProPassingYear" placeholder="Passing year" />
+                        <input type="text" name="clientProMarkPercentage" placeholder="Mark %" />
+                        <input type="text" name="clientProDivision" placeholder="Division" />
                         <button class="professional-add-button" id="newAdd" value="add">
                           Add
                         </button>
@@ -246,7 +192,7 @@
                     <td class="identify">Extra Qualification:</td>
                     <td class="extra-qualification input-data-work">
                       <div class="extra">
-                        <input type="text" name="extraQualification" />
+                        <input type="text" name="clientExtraQualification" />
                         <button class="extra-add-button" id="extra-new-add-button">
                           Add
                         </button>
@@ -257,7 +203,7 @@
                     <td class="identify">Work Experience:</td>
                     <td class="work-experience input-data-work">
                       <div class="work">
-                        <input type="text" name="workExperience" />
+                        <input type="text" name="clientWorkExperience" />
                         <button class="work-add-button" id="work-new-add-button">
                           Add
                         </button>
@@ -267,60 +213,62 @@
                   <tr>
                     <td class="identify">Photo:</td>
                     <td class="input-data-work">
-                      <input type="file" name="photo" />
+                      <input type="file" name="clientPhoto" accept="image/*" onchange="storeImageAndRedirect()" id="selectedClientPhoto"/>
                     </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <td class="identify">
-                      Enter Captcha text: <span>*</span>
+                      code: <span>*</span>
                     </td>
                     <td class="input-data-work">
-                      <input class="w-25 captcha-text" type="text" disabled value="2XaZ7at" />
-                      <i class="referes-captcha fas fa-sync-alt" style="margin-left: 10px"></i>
-                      <!-- <i class=" fas fa-undo" ></i> -->
-                      <input type="text" placeholder="Enter Captcha here" />
+                      <input class="w-25 captcha-text" type="text" disabled value="2Xx9t" />
+                      <i class="referes-captcha fas fa-sync-alt captcha-changble-button" style="margin:0px 10px"></i>
+                       //<i class=" fas fa-undo" ></i>
+                      <input class="w-25 input-captch-code" name="inputCaptchCode" value="" type="text" placeholder="Enter Captcha here" />
                     </td>
-                  </tr>
+                  </tr> -->
                 </table>
+                <button class="btn bg-success text-white mt-2" type="submit">Submit Data</button>
               </form>
             </div>
             <div class="format-template text-center mt-5">
               <h2>Choose format and Click on button</h2>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="template-img">
                   <img class="img-fluid" src="img/temp1.jpg" alt="" />
                 </div>
-                <button class="template-button text-center">
-                  <a href="template1.html">Resume/CV 1</a>
+                <button class="template-button text-center w-100" id="resumeTemplate1ActivateButton">
+                  <!-- <a href="template1.html">Resume/CV 1</a> -->
+                   Resume/CV 1
                 </button>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="template-img">
                   <img class="img-fluid" src="img/temp2.jpg" alt="" />
                 </div>
-                <button class="template-button text-center">
-                  <a href="template2.html">Resume/CV 2</a>
+                <button class="template-button text-center" id="resumeTemplate2ActivateButton">
+                  <!-- <a href="template2.html">Resume/CV 2</a> -->Resume/CV 2
                 </button>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="template-img">
                   <img class="img-fluid" src="img/temp3.jpg" alt="" />
                 </div>
-                <button class="template-button text-center">
-                  <a href="template3.html">Resume/CV 3</a>
+                <button class="template-button text-center" id="resumeTemplate3ActivateButton">
+                  <!-- <a href="template3.html">Resume/CV 3</a> -->Resume/CV 3
                 </button>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="template-img">
                   <img class="img-fluid" src="img/temp4.jpg" alt="" />
                 </div>
-                <button class="template-button text-center">
-                  <a href="templat4.html">Resume/CV 4</a>
+                <button class="template-button text-center" id="resumeTemplate4ActivateButton">
+                  <!-- <a href="templat4.html">Resume/CV 4</a> -->Resume/CV 4
                 </button>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="template-img">
                   <img class="img-fluid" src="img/temp5.jpg" alt="" />
                 </div>
@@ -328,7 +276,7 @@
                   Resume/CV 5
                 </button>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="template-img">
                   <img class="img-fluid" src="img/temp6.jpg" alt="" />
                 </div>
