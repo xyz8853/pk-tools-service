@@ -183,3 +183,113 @@
         // imageElement.alt = 'No image found in session storage.';
         }
     };
+
+    const cssColors = [
+  "AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure",
+  "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue",
+  "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse",
+  "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson",
+  "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray",
+  "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen",
+  "DarkOrange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen",
+  "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet",
+  "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue",
+  "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro",
+  "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey",
+  "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed",
+  "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush",
+  "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan",
+  "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink",
+  "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey",
+  "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen",
+  "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid",
+  "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise",
+  "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin",
+  "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab",
+  "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen",
+  "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru",
+  "Pink", "Plum", "PowderBlue", "Purple", "RebeccaPurple",
+  "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon",
+  "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver",
+  "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow",
+  "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle",
+  "Tomato", "Turquoise", "Violet", "Wheat", "White",
+  "WhiteSmoke", "Yellow", "YellowGreen"
+];
+
+
+
+ /**  theme- and text color- change all concept below included-----*/
+  let changeThemeColor = document.querySelector('#changeColorTheme');
+  let changeTextColor = document.querySelector('#changeTextColor')
+  let resumeTitle = document.querySelector('#resumeTitle');
+  /**to change work below selected id or class */
+  let careerHeading = document.querySelector('.template-three');
+  let acadmicQualHeading = document.querySelector('#acadmicQualHeading');
+  let h5 = document.querySelectorAll('h5');
+  let indexColor = 0;
+
+      changeThemeColor.addEventListener('click', (event)=>{
+        if(indexColor<=cssColors.length-1){
+            indexColor++;
+        }else{
+            indexColor--;
+        }
+        resumeTitle.style.backgroundColor = cssColors[indexColor];
+        clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
+            h5.forEach((val)=>{
+                val.style.backgroundColor = cssColors[indexColor];
+            })
+        //   ++indexColor;
+      })
+  let textColorIndex=cssColors.length;
+  changeTextColor.addEventListener('click',e=>{
+      if(textColorIndex>=0){
+        textColorIndex--;
+      }else{
+        textColorIndex=cssColors.length-1;
+      }
+      resumeTitle.style.color=cssColors[textColorIndex];
+      h5.forEach((val)=>{
+          val.style.color = cssColors[textColorIndex];
+       })
+       console.log(textColorIndex);
+  })
+   /** text color change of the temp shift left color */
+    let textLeftColor = document.querySelector('#textColorShiftLeft');
+        textLeftColor.addEventListener('click', e=>{
+            if(textColorIndex == cssColors.length-1){
+                textColorIndex=0;
+            }else{
+                textColorIndex++;
+            }
+            console.log(textColorIndex);
+            resumeTitle.style.color=cssColors[textColorIndex];
+            h5.forEach((val)=>{
+                val.style.color = cssColors[textColorIndex];
+            })
+        
+    })
+    /**all button un-visible set */
+  let displayNoneBtnDiv = document.querySelector('.template-color-theme-change');
+  let manageTwoBtn = document.querySelector('#manageBtn');
+    manageTwoBtn.addEventListener('click', e=>{
+        displayNoneBtnDiv.style.display = 'none';
+        window.print();
+    })
+ /** theme color -left shift-- */
+ let themeIndex2=0;
+ let themeLeftColor = document.querySelector('#tempShiftColorLeft');
+     themeLeftColor.addEventListener('click', e=>{
+        if(indexColor==0){
+            indexColor=cssColors.length-1;
+        }else{
+            indexColor--;
+        }
+         resumeTitle.style.backgroundColor = cssColors[indexColor];
+         clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
+            h5.forEach((val)=>{
+                val.style.backgroundColor = cssColors[indexColor];
+            })
+          
+     })
