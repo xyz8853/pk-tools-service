@@ -215,35 +215,77 @@ const cssColors = [
   "Tomato", "Turquoise", "Violet", "Wheat", "White",
   "WhiteSmoke", "Yellow", "YellowGreen"
 ];
+
+ /**  theme- and text color- change all concept below included-----*/
   let changeThemeColor = document.querySelector('#changeColorTheme');
   let changeTextColor = document.querySelector('#changeTextColor')
   let resumeTitle = document.querySelector('#resumeTitle');
-  //to change work below selected id or class
-  let careerHeading = document.querySelector('.template-three');
-  let acadmicQualHeading = document.querySelector('#acadmicQualHeading');
+  /**to change work below selected id or class */
+  
   let h5 = document.querySelectorAll('h5');
   let indexColor = 0;
+
       changeThemeColor.addEventListener('click', (event)=>{
+        if(indexColor<=cssColors.length-1){
+            indexColor++;
+        }else{
+            indexColor--;
+        }
         resumeTitle.style.backgroundColor = cssColors[indexColor];
         clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
-            h5.forEach((val)=>{
-                val.style.backgroundColor = cssColors[indexColor];
-            })
-          indexColor++;
+        h5.forEach((val)=>{
+            val.style.backgroundColor = cssColors[indexColor];
+        })
+        //   ++indexColor;
       })
   let textColorIndex=cssColors.length-1;
   changeTextColor.addEventListener('click',e=>{
+      if(textColorIndex>=0){
+        textColorIndex--;
+      }else{
+        textColorIndex=cssColors.length-1;
+      }
       resumeTitle.style.color=cssColors[textColorIndex];
-      
       h5.forEach((val)=>{
           val.style.color = cssColors[textColorIndex];
        })
-      textColorIndex--;
+       console.log(textColorIndex);
   })
-
+   /** text color change of the temp shift left color */
+    let textLeftColor = document.querySelector('#textColorShiftLeft');
+        textLeftColor.addEventListener('click', e=>{
+            if(textColorIndex == cssColors.length-1){
+                textColorIndex=0;
+            }else{
+                textColorIndex++;
+            }
+            console.log(textColorIndex);
+            resumeTitle.style.color=cssColors[textColorIndex];
+            h5.forEach((val)=>{
+                val.style.color = cssColors[textColorIndex];
+            })
+        
+    })
+    /**all button un-visible set */
+  let displayNoneBtnDiv = document.querySelector('.template-color-theme-change');
   let manageTwoBtn = document.querySelector('#manageBtn');
     manageTwoBtn.addEventListener('click', e=>{
-        changeThemeColor.style.display='none';
-        changeTextColor.style.display='none';
-        manageTwoBtn.style.display='none';
+        displayNoneBtnDiv.style.display = 'none';
+        window.print();
     })
+ /** theme color -left shift-- */
+ let themeIndex2=0;
+ let themeLeftColor = document.querySelector('#tempShiftColorLeft');
+     themeLeftColor.addEventListener('click', e=>{
+        if(indexColor==0){
+            indexColor=cssColors.length-1;
+        }else{
+            indexColor--;
+        }
+         resumeTitle.style.backgroundColor = cssColors[indexColor];
+         clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
+            h5.forEach((val)=>{
+                val.style.backgroundColor = cssColors[indexColor];
+            })
+          
+     })
