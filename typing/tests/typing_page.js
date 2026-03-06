@@ -23,7 +23,7 @@ let cpmSpeed = document.querySelector('#count_cpm');
   let wpm=0;
   let totalWhiteSpace=0;
   let totalAttempWord=0;
-
+  
   let totalTypingTime;
 
 
@@ -78,7 +78,14 @@ let typingTiming = function(timeMinutes=1){
     },1000);  
 }
 
-typingTiming();/**it is the function calling concept */
+//start time when click inside input box
+startTime = true;
+inputValue.addEventListener('click', event=>{
+  if(startTime)
+    typingTiming();/**it is the function calling concept */
+  startTime=false;
+})
+
 
 /**restart button concept  */
     restart.addEventListener('click', function(e){
@@ -138,14 +145,15 @@ let inputWordData = document.querySelector('#wordTypeInputData');
     }
   }
   content();//function calling concept
-
+  let currentValueToken = false;
   let currentValue = "";
+  let previousSpan= document.querySelector(`.span-${index}`);
   let currentSpan = document.querySelector(`.span-${index}`);
-      currentSpan.style.color='red';    
+      currentSpan.style.color='blue';    
   let spanNewValue = currentSpan.textContent;
       spanNewValue = spanNewValue.substring(0, spanNewValue.length-1);
 
-
+  let totalCurrectWordCounter=0;
       inputValue.addEventListener('input', function(event){
         //   if(timeEnd==false){
         //       inputValue.setAttribute('disabled', 'true');
@@ -163,22 +171,31 @@ let inputWordData = document.querySelector('#wordTypeInputData');
             index++;
             event.target.value="";
             currentValue = '';
+            if(!currentValueToken){
+              previousSpan = document.querySelector(`.span-${index-1}`);
+              previousSpan.style.color = 'red';
+            }else{
+              previousSpan = document.querySelector(`.span-${index-1}`);
+              previousSpan.style.color = 'green';
+            }
             currentSpan= document.querySelector(`.span-${index}`);
-            currentSpan.style.color= 'red';
+            currentSpan.style.color= 'blue';
             spanNewValue = currentSpan.textContent;
             spanNewValue = spanNewValue.substring(0, spanNewValue.length-1);
-
+            currentValueToken=false;
             totalWrongWord++;
           }
           if(currentValue===spanNewValue){
             currentSpan.style.color='green';
-            index++;
-            event.target.value="";
+            // index++;
+            currentValueToken=true;
+            totalCurrectWordCounter++;
+            // event.target.value="";
             currentValue = '';
-            currentSpan= document.querySelector(`.span-${index}`);
-            currentSpan.style.color= 'red';
-            spanNewValue = currentSpan.textContent;
-            spanNewValue = spanNewValue.substring(0, spanNewValue.length-1); 
+            // currentSpan= document.querySelector(`.span-${index}`);
+            // currentSpan.style.color= 'blue';
+            // spanNewValue = currentSpan.textContent;
+            // spanNewValue = spanNewValue.substring(0, spanNewValue.length-1); 
 
             totalCorrectWord++;
           }
@@ -186,26 +203,9 @@ let inputWordData = document.querySelector('#wordTypeInputData');
           accuracy = Math.round((totalCorrectWord*100)/(totalWrongWord+totalCorrectWord));
           checkAccuracy.textContent=`${accuracy}`;
           /**Gross Speed(WPM) */
-          wpm = Math.round(((totalChar/5)/totalTypingTime));
+          wpm = Math.round((((totalChar)/5)*60/sec));
           grossSpeed.textContent=`${wpm}`;
           /**CPM */
           let cpm = totalChar/totalTypingTime;
           cpmSpeed.textContent=`${cpm}`;
-
       });
-
-    // menu tools name designing
-    let color = ['#C70039','#FFC733','#DAF7A6','#FF5733','#900C3F','#C70039','#6495ED','#CCCCFF','#40E0D0','#00FF00','#0000FF','#FF0000','Lime'];
-    let colorIndex =0;
-    let navContent = document.querySelector('.navbar-heading-text') 
-    let navBarContent = ()=>{
-        
-        navContent.style.color = color[colorIndex];
-        colorIndex++;
-        if(colorIndex>=color.length-1){
-             colorIndex =0;
-        }
-        
-    }
-
-    setInterval(navBarContent,500);
