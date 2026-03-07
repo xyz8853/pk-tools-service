@@ -226,12 +226,12 @@
   let colBackground = document.querySelector('.basic-info-head');
   let h5 = document.querySelectorAll('h5');
   let indexColor = 0;
-
+    //theme color -right
       changeThemeColor.addEventListener('click', (event)=>{
-        if(indexColor<=cssColors.length-1){
+        if(indexColor>=0 && indexColor<=cssColors.length-2){
             indexColor++;
         }else{
-            indexColor--;
+            indexColor=0;
         }
         colBackground.style.backgroundColor = cssColors[indexColor];
         resumeTitle.style.backgroundColor = cssColors[indexColor];
@@ -241,9 +241,10 @@
             })
         //   ++indexColor;
       })
-  let textColorIndex=cssColors.length;
+  //text color right
+  let textColorIndex=cssColors.length-1;
   changeTextColor.addEventListener('click',e=>{
-      if(textColorIndex>=0){
+     if(textColorIndex>0){
         textColorIndex--;
       }else{
         textColorIndex=cssColors.length-1;
@@ -260,7 +261,7 @@
    /** text color change of the temp shift left color */
     let textLeftColor = document.querySelector('#textColorShiftLeft');
         textLeftColor.addEventListener('click', e=>{
-            if(textColorIndex == cssColors.length-1){
+           if(textColorIndex == cssColors.length-1){
                 textColorIndex=0;
             }else{
                 textColorIndex++;
