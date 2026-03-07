@@ -226,11 +226,12 @@ const cssColors = [
   let indexColor = 0;
 
       changeThemeColor.addEventListener('click', (event)=>{
-        if(indexColor<=cssColors.length-1){
+        if(indexColor>=0 && indexColor<=cssColors.length-2){
             indexColor++;
         }else{
-            indexColor--;
+            indexColor=0;
         }
+        console.log(indexColor);
         resumeTitle.style.backgroundColor = cssColors[indexColor];
         clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
         h5.forEach((val)=>{
@@ -240,7 +241,7 @@ const cssColors = [
       })
   let textColorIndex=cssColors.length-1;
   changeTextColor.addEventListener('click',e=>{
-      if(textColorIndex>=0){
+      if(textColorIndex>0){
         textColorIndex--;
       }else{
         textColorIndex=cssColors.length-1;
@@ -282,6 +283,7 @@ const cssColors = [
         }else{
             indexColor--;
         }
+        console.log(indexColor);
          resumeTitle.style.backgroundColor = cssColors[indexColor];
          clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
             h5.forEach((val)=>{
