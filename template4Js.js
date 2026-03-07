@@ -231,10 +231,10 @@ const cssColors = [
   let indexColor = 0;
 
       changeThemeColor.addEventListener('click', (event)=>{
-        if(indexColor<=cssColors.length-1){
+        if(indexColor>=0 && indexColor<=cssColors.length-2){
             indexColor++;
         }else{
-            indexColor--;
+            indexColor=0;
         }
         resumeTitle.style.backgroundColor = cssColors[indexColor];
         clientSetPhoto.style.border = `5px solid ${cssColors[indexColor]}`;
@@ -250,7 +250,7 @@ const cssColors = [
             })
         //   ++indexColor;
       })
-  let textColorIndex=cssColors.length;
+  let textColorIndex=cssColors.length-1;
   changeTextColor.addEventListener('click',e=>{
       if(textColorIndex>=0){
         textColorIndex--;
