@@ -396,6 +396,7 @@ let navContent = document.querySelector('.navbar-heading-text')
 
     //resume template data handling
     //template choose option
+    let templateActiveFlag = false;
     let templateOption = 1;
     let clientMaxData = [];
     let acadmicQualification = [];
@@ -406,6 +407,9 @@ let navContent = document.querySelector('.navbar-heading-text')
     let resumeTemplateFlag=false;
     let clientInputName ='';
     function formHandlingData(event){
+        //template avtive choose option
+        templateActiveFlag = true;
+        
         var acadmicObject = {
         exam:'mca',
         board:'up',
@@ -529,7 +533,9 @@ let navContent = document.querySelector('.navbar-heading-text')
             location.assign("templat4.html");
         }
 
-        
+        //localstorage to templateFlag 
+        localStorage.setItem('templateChooseFalg', templateActiveFlag);
+
         
         event.preventDefault();
     }
@@ -557,16 +563,28 @@ let navContent = document.querySelector('.navbar-heading-text')
   let resumeTheme1 = document.querySelector('#resumeTemplate1ActivateButton');
       resumeTheme1.addEventListener('click', e=>{
          templateOption=1;
+         let templFlag = localStorage.getItem('templateChooseFalg');
+         if(templateOption==1 && templFlag)
+                 location.assign("template1.html");
       })
   let resumeTheme2 = document.querySelector('#resumeTemplate2ActivateButton');
       resumeTheme2.addEventListener('click', e=>{
         templateOption = 2;
+        let templFlag = localStorage.getItem('templateChooseFalg');
+        if(templateOption==2 && templFlag)
+                 location.assign("template2.html");
       })
   let resumeTheme3 = document.querySelector('#resumeTemplate3ActivateButton');
       resumeTheme3.addEventListener('click', e=>{
         templateOption = 3;
+        let templFlag = localStorage.getItem('templateChooseFalg');
+        if(templateOption==3 && templFlag)
+                 location.assign("template3.html");
       })
   let resumeTheme4 = document.querySelector('#resumeTemplate4ActivateButton');
       resumeTheme4.addEventListener('click', e=>{
         templateOption = 4;
+        let templFlag = localStorage.getItem('templateChooseFalg');
+        if(templateOption==4 && templFlag)
+                 location.assign("templat4.html");
       })
